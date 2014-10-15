@@ -1,4 +1,4 @@
-  var string = 'Chameleon proudly presents a javascript scroller run trough xss! Please check user input next time :)!';
+  var string = 'Koen Hendriks proudly presents a javascript scroller! ';
   var seconds = Date.now();
   var target = document.body;  
   var letters = string.split("");
