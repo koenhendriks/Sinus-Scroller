@@ -1,12 +1,16 @@
-  var string = 'Koen Hendriks proudly presents a javascript scroller! ';
-  var seconds = Date.now();
-  var target = document.body;  
-  var letters = string.split("");
+var string = 'Rotating Cube proudly presents a javascript scroller! ';
+var seconds = Date.now();
+var letters = string.split("");
 
 (function() {
-  for(var i = 0; i < letters.length; i++){
-    target.innerHTML += '<div style="position:fixed;" id="scroll-letter-'+i+'">'+letters[i]+'</div>';
-  }
+    
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        for(var i = 0; i < letters.length; i++){
+            document.body.innerHTML += '<div style="position:fixed;" id="scroll-letter-'+i+'">'+letters[i]+'</div>';
+        }
+        sinScroll();
+    });
+
   function sinScroll(){
     
     var y = Math.floor((Date.now()-seconds)/10)/30;
@@ -26,5 +30,5 @@
 
     setTimeout(sinScroll,1); 
   }
-  sinScroll();
 })();
+
